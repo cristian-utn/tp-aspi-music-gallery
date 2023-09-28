@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles/register_and_login.css"> -->
+    <link rel="stylesheet" href="styles/register.css">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="grid_container">
+        <main class="main">
+            <div class="card">
+                <div class="titulo_container">
+                    <h1>Registrate</h1>
+                </div>
+                <form action="index.html" id="form_registro" method="post">
+                    <section class="fields">
+                        <div class="field">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required minlength="5">
+                        </div>
+                        <div class="field">
+                            <label for="contrasenia">Contraseña</label>
+                            <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required
+                                minlength="8">
+                        </div>
+                        <div class="field">
+                            <label for="repetir-contrasenia">Repetir Contraseña</label>
+                            <input type="password" name="repetir-contrasenia" id="repetir-contrasenia"
+                                placeholder="Repetir contraseña" required minlength="8">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="field">
+                            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+                        </div>
+                        <div class="field">
+                            <a href="premium.html" class="link">Premium</a>
+                        </div>
+                    </section>
+                    <button type="submit" class="button">Registrarme</button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer">
+            <p>Integrante 1: Clarisa Rodriguez</p>
+            <p>Integrante 2: Pablo Barcena</p>
+            <p>Integrante 3: Nicolas Barrionuevo</p>
+            <p>Integrante 4: Cristian Aspi</p>
+            <p>Integrante 5: Facundo De Marco</p>
+            <p>Integrante 6: Nadia Spinelli</p>
+        </footer>
+    </div>
+    <script>
+        function onFormSubmit(event) {
+            event.preventDefault();
+
+            //Aca se haria la peticion a una API Rest por ejemplo.
+            // La cual validaria el registro y nos concederia el acceso o lo denegaria.
+            // Simulamos que nos permitio el acceso redirigiendo a la vista de index (inicio de sesion).
+            window.location.href = "index.html";
+        }
+        let form = document.getElementById("form_registro");
+        form.addEventListener("submit", onFormSubmit);
+    </script>
+</body>
+
+</html>

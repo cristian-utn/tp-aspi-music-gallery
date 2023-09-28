@@ -1,0 +1,70 @@
+@import url("./partials/base.css");
+@import url("./toolkit/forms.css");
+@import url("./partials/header_footer.css");
+.grid_container{
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+    grid-template-rows: 10vh max-content 10vh;
+}
+.main{
+    grid-area: main;
+}
+
+.header{
+    justify-content: end;
+    margin: 12px 0;
+}
+.plan_premium {
+    margin: 40px 20px;
+}
+.plan_premium form {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 30px 20px;
+}
+.tipoDePlan {
+    padding: 30px 30px;
+    margin: auto;
+}
+.tipoDePlan img {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.tipoDePlan h2 {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.tipoDePlan div {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.tipoDePlan ul {
+    list-style: none;
+}
+
+.planRadioButton{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    accent-color: green;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+}
+/*  */
+.a_button{
+    text-decoration: none;
+    font-size: 0.8em;
+}

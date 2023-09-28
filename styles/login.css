@@ -1,0 +1,36 @@
+@import url("./partials/base.css");
+@import url("./partials/header_footer.css");
+@import url("./toolkit/forms.css");
+.grid_container{
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "main"
+                        "footer";
+    grid-template-rows: 90% 10%;
+}
+/* .main{
+} */
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 30%;
+}
+
+@media (max-width: 768px){
+    .card{
+        width: 90%;
+    }
+}
+.card a{
+    text-align: center;
+}
+.field{
+    flex-direction: column;
+}
+

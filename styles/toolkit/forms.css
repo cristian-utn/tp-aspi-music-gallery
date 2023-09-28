@@ -1,0 +1,76 @@
+.titulo_container{
+  margin: 20px 30px;
+}
+.card{
+  /* height: 100%; */
+  /* padding: 30px 50px; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.card form{
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .card{
+      padding: 20px 30px;
+  }
+}
+
+.fields{
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .fields{
+      width: 100%;
+  }
+}
+/*  */
+.button_container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.field {
+  display: flex;
+}
+.field label{
+  padding-bottom: 5px;
+}
+.field input{
+  width: 100%;
+  padding: 15px 5px;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .field input{
+    padding: 10px 2px;
+  }
+}
+.button{
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 0;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  text-decoration: none;
+}
+.button:hover{
+  background-color: var(--primary-color-dark);
+}
+.button_full{
+  width: 100%;
+}
+.link{
+  display: block;
+  padding: 10px 0;
+  color: gray;
+}

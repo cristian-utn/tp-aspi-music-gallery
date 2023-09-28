@@ -1,0 +1,61 @@
+@import url("./partials/base.css");
+@import url("./toolkit/forms.css");
+@import url("./partials/header_footer.css");
+.grid_container{
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+    display: grid;
+    grid-template-areas: "header"
+                        "main"
+                        "footer";
+    grid-template-rows: 10% 80% 10%;
+}
+.main{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    width: 100%;
+}
+.header{
+    justify-content: end;
+}
+.a_button{
+    text-decoration: none;
+    font-size: 0.8em;
+}
+/* field */
+.field{
+    align-items: center;
+}
+.field label{
+    flex: 1;
+}
+@media (max-width: 375px) {
+    .field label{
+        font-size: 0.7em;
+    }
+  }
+  @media (min-width: 376px) and (max-width: 768px) {
+    .field label{
+        font-size: 0.8em;
+    }
+  }
+.field input{
+    flex: 2;
+}
+@media (max-width: 768px){
+    .field input{
+        flex: 1;
+    }
+}
+
+@media(max-width: 768px) {
+    .home_button{
+        font-size: 0.7em;
+    }
+}

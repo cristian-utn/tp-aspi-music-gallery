@@ -1,0 +1,24 @@
+/* @import url("./base.css"); */
+/* @import url("./header_footer.css"); */
+/* 
+.header{
+    justify-content: end;
+}
+.main{
+    grid-area: main;
+} */
+/* .a_button{
+    text-decoration: none;
+    font-size: 0.8em;
+} */
+/* .footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--dark-gray);
+}
+@media (max-width: 768px){
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+} */
