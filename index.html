@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -22,7 +22,7 @@
                     <div class="field">
                         <label for="contrasenia">Contraseña</label>
                         <!-- <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña" required minlength="8"> -->
-                        <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
+                        <input type="password" name="clave" id="contrasenia" placeholder="Contraseña">
                     </div>
                     <button type="submit" class="button button_full">Iniciar sesión</button>
                 </form>
@@ -31,25 +31,21 @@
         </main>
 
         <footer class="footer">
-            <p>Integrante 1: Clarisa Rodriguez</p>
-            <p>Integrante 2: Pablo Barcena</p>
-            <p>Integrante 3: Nicolas Barrionuevo</p>
             <p>Integrante 4: Cristian Aspi</p>
-            <p>Integrante 5: Facundo De Marco</p>
-            <p>Integrante 6: Nadia Spinelli</p>
         </footer>
     </div>
+    <script src="./js/checkInicio.js" type="module"></script>
     <script>
-        function onFormSubmit(event) {
-            event.preventDefault();
+        //function onFormSubmit(event) {
+          //  event.preventDefault();
 
             //Aca se haria la peticion a una API Rest por ejemplo.
             // La cual validaria el inicio de sesion y nos concederia el acceso o lo denegaria.
             // Simulamos que nos permitio el acceso redirigiendo a la vista de pantalla principal.
-            window.location.href = "pantalla-principal.html";
-        }
-        let form = document.getElementById("form_inicio_sesion");
-        form.addEventListener("submit", onFormSubmit);
+            //window.location.href = "pantalla-principal.html";
+        //}
+        //let form = document.getElementById("form_inicio_sesion");
+        //form.addEventListener("submit", onFormSubmit);
     </script>
 </body>
 

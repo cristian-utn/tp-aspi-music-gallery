@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #overlay {
+            position: fixed;
+            top:0; left: 0; bottom: 0; right: 0;
+            background: red;
+            opacity: 0;
+            z-index: -1;
+          }
+    </style>
+</head>
+<body>
+    
+    <!-- <audio src="./music/Billie Eilish - my future.mp3" type="audio/mp3" controls autoplay></audio> -->
+    <audio autoplay crossOrigin="anonymous" width="400" controls>
+        <!-- <source src="https://github.com/cristian-utn/tp-aspi-music-gallery/tree/main/music/Billie%20Eilish%20wish%20you%20were%20gay.mp3" type="audio/mpeg"> -->
+        <source src="./music/Billie Eilish - my future.mp3" type="audio/mp3">
+    </audio>
+    <div id="overlay"></div>
+    <script src="./js/audio.js"></script>
+</body>
+</html>
