@@ -71,9 +71,12 @@
     background-image: url("../../img/icon_favorite.png");
     background-size: 40px 40px;
     background-repeat: no-repeat;
+    opacity: 0.6;
     /* opacity: 0.5; */
 }
-
+.star_selected{
+    background-image: url("../../img/icon_favorite.png");
+}
 @media (max-width: 768px) {
 
 }

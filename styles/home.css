@@ -41,7 +41,16 @@
     position: relative;
     
 }
-
+.albums .contenedor .img_description{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    background-color: black;
+    text-align: center;
+    box-sizing: 3em;
+    padding: 8px;
+}
 .contenedor .estrellita{
     position: absolute;
     width: 40px;

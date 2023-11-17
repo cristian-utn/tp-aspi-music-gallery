@@ -3,9 +3,9 @@
 @import url("./partials/header_footer.css");
 @import url("./partials/menu.css");
 @import url("./partials/main.css");
-@import url("./partials/recomendacion.css");
 @import url("./partials/descripcion.css");
 @import url("./partials/reproductor.css");
+@import url("./partials/recomendacion.css");
 /* .main{
     grid-area: main;
 } */
@@ -26,13 +26,32 @@
         width: 100%;
     }
 }
-#buscar{
+#campo_buscar{
     background-color: black;
     color: white;
     border-radius: 10px;
     padding: 4px 8px;
 }
-#buscar::placeholder{
+#campo_buscar::placeholder{
     /* background-color: rgba(255, 255, 255, 0.541); */
     color: white;
+}
+.albums .contenedor .img_description_cancion {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+    box-sizing: 3em;
+    padding: 4px;
+}
+.albums .contenedor .img_description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    background-color: black;
+    text-align: center;
+    box-sizing: 3em;
+    padding: 4px;
 }

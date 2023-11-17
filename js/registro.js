@@ -1,29 +1,39 @@
-console.log("importare registro");
-import { getDatos } from "./DB.js";
+import { getDatos, guardaDatos } from "./DB.js";
 // import fun from "./parte.js"
 // fun();
 import checkSession from "./checkInicio1.js";
+import { siExisteUsuario } from "./login.js";
 let datos=getDatos();
-console.log("no funciona");
 const form_registro=document.getElementById("form_registro");
-console.log(datos);
-checkSession(datos);
+// checkSession(datos);
 form_registro.addEventListener("submit",(e)=>{
     e.preventDefault();
     // const {contrasenia,repetir_contrasenia}=Object.fromEntries(new FormData(e.target))
     const valores=Object.fromEntries(new FormData(e.target))
-    if(valores.contrasenia==valores.repetir_contrasenia){
+    if(valores.clave==valores.repetir_clave){
         console.log("si es igual la clave");
-    }
-    if(!datos.usuarios.some((d)=>{
-        console.log("recorro: ",d);
-        return d.nombre == valores.nombre;  
-    })){
-        console.log("no existe el nombre");
-        datos.usuarios.push(valores)
-    }
-    else{
-        console.log("si existe el nombre -> no copiare");
-    }
-    console.log(datos);
+        let fecha=getFechaFromString(valores.fecha_nacimiento);
+        if(siExisteUsuario(valores.usuario,datos.usuarios))alert("el usario ya existe");
+        else{// si no existe usuario
+            if(fecha.getTime()>new Date().getTime())alert("fecha superior a la actual");
+            else{
+                console.log("registrado correctamente");
+                alert("registrado con exito");
+                datos.usuarios.push(valores);
+                guardaDatos(datos);
+                window.location = "/";
+            }
+        }
+        // console.log(new Date(valores.fecha_nacimiento));
+    }else alert("la contraseña debe ser igual");
 });
+function getFechaFromString(fecha_input){
+    const nueva_fecha=new Date();
+    let [anio,mes,dia]=fecha_input.split("-");
+    nueva_fecha.setDate(Number(dia));
+    nueva_fecha.setMonth(Number(mes));
+    nueva_fecha.setFullYear(Number(anio));
+    // console.log(nueva_fecha);
+    // console.log("dia: " + dia+" mes: " + mes + " año: " + anio);
+    return nueva_fecha;
+};

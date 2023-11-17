@@ -16,8 +16,8 @@
             <h1>Mis canciones favoritas</h1>
             <div class="user_info">
                 <div>
-                    <p>Nombre usuario</p>
-                    <a href="index.html" class="cerrar_sesion">Cerrar sesión</a>
+                    <p id="nombre_usuario">Nombre usuario</p>
+                    <a id="btn_cerrar_sesion" href="index.html" class="cerrar_sesion">Cerrar sesión</a>
                 </div>
 
                 <a href="perfil.html">
@@ -48,140 +48,26 @@
             </div>
             <div class="favoritas_container">
                 <table class="tbody">
-                    <tbody>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 1</span><span class="star"></span></td>
-                            <td><span>Album 1</span><span class="star"></span></td>
-                            <td>1:00</td>
-                            <td>1500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 2</span><span class="star"></span></td>
-                            <td><span>Album 2</span><span class="star"></span></td>
-                            <td>2:00</td>
-                            <td>2500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 3</span><span class="star"></span></td>
-                            <td><span>Album 3</span><span class="star"></span></td>
-                            <td>3:00</td>
-                            <td>3500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 4</span><span class="star"></span></td>
-                            <td><span>Album 4</span><span class="star"></span></td>
-                            <td>4:00</td>
-                            <td>4500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 5</span><span class="star"></span></td>
-                            <td><span>Album 5</span><span class="star"></span></td>
-                            <td>5:00</td>
-                            <td>5500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 6</span><span class="star"></span></td>
-                            <td><span>Album 6</span><span class="star"></span></td>
-                            <td>6:00</td>
-                            <td>6500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 7</span><span class="star"></span></td>
-                            <td><span>Album 7</span><span class="star"></span></td>
-                            <td>7:00</td>
-                            <td>7500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 8</span><span class="star"></span></td>
-                            <td><span>Album 8</span><span class="star"></span></td>
-                            <td>8:00</td>
-                            <td>8500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 9</span><span class="star"></span></td>
-                            <td><span>Album 9</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-play"></i></td>
-                            <td><span>Cancion 99</span><span class="star"></span></td>
-                            <td><span>Album 99</span><span class="star"></span></td>
-                            <td>9:00</td>
-                            <td>9500</td>
-                        </tr>
+                    <tbody id="lista_canciones">
+                        
                     </tbody>
                 </table>
             </div>
         </main>
+        <!--  -->
         <div class="recomendados">
-            <img src="img/album16.jpg" alt="album" class="cover">
-            <img src="img/estrella.png" alt="estrella" class="star">
-            <span class="star"></span>
+            <img id="e_img" src="img/album16.jpg" alt="album" class="cover">
+            <!-- <img id="e_estrella" src="img/estrella.png" alt="estrella" class="star"> -->
+            <span id="e_estrella" class="star"></span>
         </div>
         <section class="descripcion">
-            <small class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat labore modi adipisci nobis, praesentium
-                inventore excepturi, maiores ullam, vero necessitatibus tempora ducimus. Sunt laboriosam, quae rerum
-                quisquam consequatur assumenda porro!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-                minus nemo. Voluptate dignissimos tempore in voluptas dolor perferendis cupiditate, accusamus
-                perspiciatis laudantium debitis incidunt explicabo? Consequuntur hic sit illum perspiciatis?
-            </small>
+            <p><strong id="e_cancion">cancion</strong></p>
+            <p><strong id="e_autor">autor</strong></p>
+            <small class="paragraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat labore modi adipisci nobis, praesentium inventore excepturi, maiores ullam, vero necessitatibus tempora ducimus. Sunt laboriosam, quae rerum quisquam consequatur assumenda porro!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, minus nemo. Voluptate dignissimos tempore in voluptas dolor perferendis cupiditate, accusamus perspiciatis laudantium debitis incidunt explicabo? Consequuntur hic sit illum perspiciatis? asdfasdfasdfasdfasd asdfas asdfa asdfasd asdfasd  asdfasdf  asdf asdff</small>
         </section>
+        <!--  -->
         <section class="reproduccion">
-            <audio controls>
-                <source type="audio/mp3" src="music/Billie Eilish - Ocean Eyes.mp3">
-            </audio>
+            <audio controls type="audio/mp3" id="e_audio" src="music/Billie Eilish wish you were gay.mp3"><source></audio>
         </section>
         <footer class="footer">
             <p>Integrante 1: Clarisa Rodriguez</p>
@@ -192,6 +78,7 @@
             <p>Integrante 6: Nadia Spinelli</p>
         </footer>
     </div>
+    <script src="js/mis_favoritas.js" type="module"></script>
 </body>
 
 </html>

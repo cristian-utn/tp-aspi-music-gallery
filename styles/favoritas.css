@@ -77,25 +77,14 @@ td:nth-child(5),th:nth-child(5){
 }
 
 .star{
-    display: block;
-    position: absolute;
     width: 40px;
     height: 40px;
     top: 0px;
     right: 10px;
     /* background-color: red; */
-    background-image: url("../img/estrella.png");
-    background-size: 40px 40px;
-    background-position: center center;
-    background-repeat: no-repeat;
 }
-.star:hover{
-    cursor: pointer;
-    background-image: url("../img/icon_favorite.png");
-    background-size: 40px 40px;
-    background-repeat: no-repeat;
-    /* opacity: 0.5; */
-}
+
+
 .fa-play:hover{
     color: var(--primary-color);
 }

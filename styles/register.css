@@ -30,6 +30,14 @@
 .field label{
     flex: 1;
 }
+.field input{
+    width: 100%;
+    padding: 15px 5px;
+    margin: 0;
+}
+.field{
+    padding: 10px 0;
+}
 @media (max-width: 375px) {
     .field label{
         font-size: 0.7em;
