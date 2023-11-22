@@ -7,48 +7,77 @@
     grid-template-areas: "header"
                         "main"
                         "footer";
-    grid-template-rows: 10vh max-content 10vh;
+    grid-template-rows: min-content max-content 10vh;
 }
 .main{
     grid-area: main;
+    width: 100%;
 }
 
 .header{
-    justify-content: end;
+    grid-area: header;
+    /* justify-content: end; */
     margin: 12px 0;
 }
 .plan_premium {
-    margin: 40px 20px;
+    /* margin: 40px 20px; */
+    margin: 0;
+    /* width: 100%; */
 }
-.plan_premium form {
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+.plan_premium .items_form{
+    margin: 0;
+    display: grid;
     width: 100%;
-    margin: 30px 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 4px;
+    /* margin: 30px 20px; */
 }
-.tipoDePlan {
-    padding: 30px 30px;
-    margin: auto;
+
+.tipoDePlan{
+    box-sizing: border-box;
+    /* padding: 20px 20px; */
+    width: 100%;
+    /* grid: 1; */
+    display: grid;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: auto auto 1fr auto;
+    /* justify-content: space-between; */
+    align-items: flex-start;
+    /* margin: auto; */
+    gap: 8px;
+
+}
+.tipoDePlan input{
+    /* justify-self: flex-end; */
+    /* justify-items: flex-end; */
 }
 .tipoDePlan img {
-    margin: auto;
+    /* margin: auto; */
+    /* justify-self: baseline; */
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .tipoDePlan h2 {
     margin-bottom: 15px;
     display: flex;
     justify-content: center;
 }
-.tipoDePlan div {
-    margin-top: 15px;
-    margin-bottom: 10px;
+.tipoDePlan > div {
+    /* margin-top: 15px; */
+    /* margin-bottom: 10px; */
+    /* align-self: flex-start; */
+    display: flex;
+    align-items: baseline;
 }
 .tipoDePlan ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .planRadioButton{
@@ -60,11 +89,15 @@
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     cursor: pointer;
-    position: relative;
-    left: 50%;
+    margin: 0 auto;
+    /* position: relative; */
+    /* left: 50%; */
 }
 /*  */
 .a_button{
     text-decoration: none;
     font-size: 0.8em;
+}
+.user_info{
+    /* margin-top: 10px; */
 }

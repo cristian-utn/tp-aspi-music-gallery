@@ -84,7 +84,9 @@ td:nth-child(5),th:nth-child(5){
     /* background-color: red; */
 }
 
-
+.fa-play{
+    color: white;
+}
 .fa-play:hover{
     color: var(--primary-color);
 }

@@ -19,7 +19,10 @@ form_registro.addEventListener("submit",(e)=>{
             else{
                 console.log("registrado correctamente");
                 alert("registrado con exito");
-                datos.usuarios.push(valores);
+                valores["albums_favoritos"]={};
+                valores["canciones_favoritas"]={};
+                valores["musica_actual"]={};
+                datos.usuarios[valores.usuario]=(valores);
                 guardaDatos(datos);
                 window.location = "/";
             }

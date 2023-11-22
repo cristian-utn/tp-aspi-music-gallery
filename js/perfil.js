@@ -9,16 +9,16 @@ const nombre_usuario=document.getElementById("nombre_usuario");
 let btn_cerrar_sesion=document.getElementById("btn_cerrar_sesion");
 const e_usuario=document.getElementById("usuario");
 const e_form_perfil=document.getElementById("form_perfil");
-nombre_usuario.innerText=datos.usuario.usuario;
+nombre_usuario.innerText=datos.usuario;
 const clave=document.getElementById("clave");
 const repetir_clave=document.getElementById("repetir_clave");
 const fecha_nacimiento=document.getElementById("fecha_nacimiento");
 const email=document.getElementById("email");
-clave.value=datos.usuario.clave;
-repetir_clave.value=datos.usuario.repetir_clave;
-fecha_nacimiento.value=datos.usuario.fecha_nacimiento;
-email.value=datos.usuario.email;
-e_usuario.value=datos.usuario.usuario;
+clave.value=datos.usuarios[datos.usuario].clave;
+repetir_clave.value=datos.usuarios[datos.usuario].repetir_clave;
+fecha_nacimiento.value=datos.usuarios[datos.usuario].fecha_nacimiento;
+email.value=datos.usuarios[datos.usuario].email;
+e_usuario.value=datos.usuarios[datos.usuario].usuario;
 btn_cerrar_sesion.addEventListener("click",()=>{
     datos.usuario=null;
     guardaDatos(datos);
@@ -28,16 +28,23 @@ const btn_eliminar=document.getElementById("btn_eliminar");
 btn_eliminar.addEventListener("click",(e)=>{
     // Object.keys();
     e.preventDefault()  
-    for (let i = 0; i < datos.usuarios.length; i++) {
-        // if(datos.usuario.nombre==e_usuario){
-        if(datos.usuarios[i].usuario==e_usuario.value){
-            datos.usuarios.splice(i,1);
-            datos.usuario=null;
-            guardaDatos(datos);
-            alert("usuario: "+e_usuario.value+"eliminado correctamente");
-            window.location.reload();
-        }
+    // for (let i = 0; i < datos.usuarios.length; i++) {
+    //     // if(datos.usuario.nombre==e_usuario){
+    //     if(datos.usuarios[i].usuario==e_usuario.value){
+    //         datos.usuarios.splice(i,1);
+    //         datos.usuario=null;
+    //         guardaDatos(datos);
+    //         alert("usuario: "+e_usuario.value+"eliminado correctamente");
+    //         window.location.reload();
+    //     }
+    // }
+    if(datos.usuario==e_usuario.value){
+        delete datos.usuarios[datos.usuario];
+        datos.usuario=null;
+        guardaDatos(datos);
+        window.location.reload();
     }
+
 });
 e_form_perfil.addEventListener("submit",(e)=>{
     e.preventDefault();
@@ -48,22 +55,22 @@ e_form_perfil.addEventListener("submit",(e)=>{
         if(siExisteUsuario(valores.usuario,datos.usuarios)){
             if(fecha.getTime()>new Date().getTime())alert("fecha superior a la actual");
             else{
-                for (let i = 0; i < datos.usuarios.length; i++) {
+                // for (let i = 0; i < datos.usuarios.length; i++) {
                     // if(datos.usuario.nombre==e_usuario){
-                    if(datos.usuarios[i].usuario==e_usuario.value){
-                        datos.usuarios[i].clave=valores.clave;
-                        datos.usuarios[i].repetir_clave=valores.repetir_clave;
-                        datos.usuarios[i].fecha_nacimiento=valores.fecha_nacimiento;
-                        datos.usuarios[i].email=valores.email;
-                        datos.usuario=datos.usuarios[i];
+                    // if(datos.usuarios[i].usuario==e_usuario.value){
+                        datos.usuarios[datos.usuario].clave=valores.clave;
+                        datos.usuarios[datos.usuario].repetir_clave=valores.repetir_clave;
+                        datos.usuarios[datos.usuario].fecha_nacimiento=valores.fecha_nacimiento;
+                        datos.usuarios[datos.usuario].email=valores.email;
+                        // datos.usuario=datos.usuarios[i];
                         guardaDatos(datos);
                         console.log("modificado correctamente");
                         // alert("usuario: "+e_usuario.value+"eliminado correctamente");
                         // window.location.reload();
     
-                    }
+                    // }
                     
-                }
+                // }
                 // guardaDatos(datos);
             }
             // console.log(new Date(valores.fecha_nacimiento));

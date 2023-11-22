@@ -10,25 +10,25 @@ export function getDatos() {
 export function checkExistLocalStorage() {
     if (localStorage.getItem("usuarios") === null) {
         console.log("no hay usuarios");
-        guardaDatos({ usuarios: [], usuario: null });
+        guardaDatos({ usuarios: {}, usuario: null });
         alert("no existe usaurios. registrate");
         window.location = "/registro.html";
     }
     else {
-        console.log("hay datos localStorage");
-        let datos=getDatos();
-        if(!datos.hasOwnProperty("albums_favoritos")){
-            datos["albums_favoritos"]={};
-            guardaDatos(datos);
-        }
-        if(!datos.hasOwnProperty("canciones_favoritas")){
-            datos["canciones_favoritas"]={};
-            guardaDatos(datos);
-        }
-        if(!datos.hasOwnProperty("musica_actual")){
-            datos["musica_actual"]={};
-            guardaDatos(datos);
-        }
+        console.log('hay datos localStorage\nrevisa usando este comando\nJSON.parse(localStorage.getItem("usuarios"))');
+        // let datos=getDatos();
+        // if(!datos.hasOwnProperty("albums_favoritos")){
+        //     datos["albums_favoritos"]={};
+        //     guardaDatos(datos);
+        // }
+        // if(!datos.hasOwnProperty("canciones_favoritas")){
+        //     datos["canciones_favoritas"]={};
+        //     guardaDatos(datos);
+        // }
+        // if(!datos.hasOwnProperty("musica_actual")){
+        //     datos["musica_actual"]={};
+        //     guardaDatos(datos);
+        // }
     }
 }
 export function getListaAlbums() {

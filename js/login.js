@@ -6,11 +6,16 @@ export function buscarUsuario(usuario,usuarios){
     }
     return null;
 }
+
+// export function siExisteUsuario(usuario,usuarios){
+//     for (let i = 0; i < usuarios.length; i++) {
+//         if(usuarios[i].usuario==usuario){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 export function siExisteUsuario(usuario,usuarios){
-    for (let i = 0; i < usuarios.length; i++) {
-        if(usuarios[i].usuario==usuario){
-            return true;
-        }
-    }
-    return false;
+    // console.log("si existe el usuario");
+    return usuarios.hasOwnProperty(usuario);
 }
